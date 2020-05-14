@@ -1,3 +1,18 @@
+# Using SAGE2 Webview Container with React
+
+The [SAGE2 Webview Container](https://bitbucket.org/sage2/sage2/wiki/SAGE2%20Webview%20Container) lets you hook into SAGE2 App state while developing an app just as you would develop a normal webpage. Follow the guide found at the link above.
+
+This repository provides an example of how to do so. There are a few main things to note to ensure that your React app works with SAGE2.
+
+1. Add the `"homepage": "."` field to your package.json file
+2. Include the `SAGE2_AppState.js` file found in this repository and load it using `require("./SAGE2_AppState.js")` within your application entrypoint
+3. Wrap your application in the `SAGE2App` component (exported from `useSAGE2AppState.js`)
+4. **Read** your entire App state using the `useSAGE2AppState` hook (exported from `useSAGE2AppState.js`)
+5. **Read and write** your entire App state using the `useSAGE2AppStateValue` hook (exported from `useSAGE2AppState.js`)
+6. Build your React app (using `npm run build`) and copy the contents of the `build` folder into the `webpage` folder of the skeletonWebviewApp
+
+# Create React App default README below vvv
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts

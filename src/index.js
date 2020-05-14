@@ -6,8 +6,6 @@ import * as serviceWorker from "./serviceWorker";
 
 require("./SAGE2_AppState");
 
-// console.log("SAGE2 APP STATE:", window.SAGE2_AppState);
-
 ReactDOM.render(
   <React.StrictMode>
     <App />
